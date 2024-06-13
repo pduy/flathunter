@@ -1,9 +1,12 @@
-[[source]]
-url = "https://pypi.python.org/simple"
-verify_ssl = true
-name = "pypi"
+[tool.poetry]
+name = "flathunter"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
 
-[packages]
+[tool.poetry.dependencies]
+python = "^3.10"
 PyYAML = "*"
 requests = "*"
 urllib3 = "*"
@@ -32,9 +35,12 @@ pyright = "1.1.361"
 types-beautifulsoup4 = "*"
 selenium = "*"
 gunicorn = "22.0.0"
-flask-api = {editable = true, ref = "develop", git = "git+https://github.com/flask-api/flask-api.git"}
+#flask-api = {git = "git+https://github.com/flask-api/flask-api.git", develop = true, rev = "develop"}
+flask-api = "*"
 
-[dev-packages]
 
-[requires]
-python_version = "3"
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

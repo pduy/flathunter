@@ -54,7 +54,7 @@ class Hunter:
         result = []
         # We need to iterate over this list to force the evaluation of the pipeline
         for expose in processor_chain.process(self.crawl_for_exposes(max_pages)):
-            logger.info('New offer: %s', expose['title'])
+            logger.info(f"New offer: {expose['title']}, url: {expose['url']}")
             result.append(expose)
 
         return result

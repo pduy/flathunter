@@ -4,6 +4,7 @@ from flathunter.config import YamlConfig
 from flathunter.logging import logger
 from flathunter.notifiers import SenderApprise, SenderMattermost, SenderTelegram, SenderSlack
 from flathunter.exceptions import HeartbeatException
+from flathunter.notifiers.sender_terminal import SenderTerminal
 
 
 def interval2counter(interval: str) -> int:
@@ -36,6 +37,8 @@ class Heartbeat:
             self.notifier = SenderApprise(config)
         elif 'slack' in notifiers:
             self.notifier = SenderSlack(config)
+        elif 'terminal' in notifiers:
+            self.notifier = SenderTerminal(config)
         else:
             raise HeartbeatException("No notifier configured - check 'notifiers' config section!")
 

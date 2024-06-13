@@ -19,10 +19,13 @@ loop:
 # Currently supported services: www.immobilienscout24.de,
 # www.immowelt.de, www.wg-gesucht.de, www.kleinanzeigen.de, meinestadt.de and vrm-immo.de.
 # List the URLs in the following format:
-# urls:
-# 	- https://www.immobilienscout24.de/Suche/...
-# 	- https://www.wg-gesucht.de/...
 urls:
+    #- https://www.immobilienscout24.de/Suche/de/berlin/berlin/wohnung-mit-keller-mieten?haspromotion=false&numberofrooms=2.0-10.0&price=500.0-1600.0&livingspace=50.0-150.0&exclusioncriteria=swapflat&pricetype=calculatedtotalrent&geocodes=110000000405,110000000406,110000000101,110000000201,110000000102,110000000103,110000000301,110000000401,110000000104,110000000105,110000000106,1100000002,110000000701&enteredFrom=result_list
+    - https://www.immowelt.de/suche/berlin/immobilien/mieten?ama=150&ami=50&d=true&pma=1600&pmi=1&rma=10&rmi=2&sd=DESC&sf=RELEVANCE&sp=1
+    - https://www.wg-gesucht.de/
+    - https://www.kleinanzeigen.de/s-wohnung-mieten/berlin/c203l3331
+# 	- https://www.immobilienscout24.de/Suche/...
+#urls:
 
 # Define filters to exclude flats that don't meet your critera.
 # Supported filters include 'max_rooms', 'min_rooms', 'max_size', 'min_size',
@@ -33,16 +36,17 @@ urls:
 # More to Python regex here: https://docs.python.org/3/library/re.html
 #
 # Example:
-# filters:
-#   excluded_titles:
-#     - "wg"
-#     - "zwischenmiete"
-#   min_price: 700
-#   max_price: 1000
-#   min_size: 50
-#   max_size: 80
-#   max_price_per_square: 1000
 filters:
+   excluded_titles:
+     - "wg"
+     - "zwischenmiete"
+     - "tauschwohnung"
+   min_price: 500
+   max_price: 1600
+   min_size: 50
+   max_size: 150
+   max_price_per_square: 22
+#filters:
 
 # There are often city districts in the address which
 # Google Maps does not like. Use this blacklist to remove
@@ -139,12 +143,13 @@ captcha:
 # You can select whether to be notified by telegram, apprise or by mattermost
 # or Slack webhooks. For all notifiers selected here a configuration must be
 # provided below.
-# notifiers:
+notifiers:
+    - terminal
 #   - telegram
 #   - apprise
 #   - mattermost
 #   - slack
-notifiers:
+#notifiers:
 
 # Sending messages using Telegram requires a Telegram Bot configured.
 # Telegram.org offers a good documentation about how to create a bot.
