@@ -168,7 +168,9 @@ class PPSFilter(AbstractFilter):
         price = ExposeHelper.get_price(expose)
         if size is None or price is None:
             return True
-        pps = price / size
+        if size == 0 or price == 0:
+            return True
+        pps = price / size if size > 0 else price
         return pps <= self.max_pps
 
 
