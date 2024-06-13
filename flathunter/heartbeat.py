@@ -57,7 +57,7 @@ class Heartbeat:
             logger.info('Sending heartbeat message.')
             self.notifier.notify(
                 'Beep Boop. This is a heartbeat message. '
-                'Your bot is actively searching for flats.'
+                'Dudu bot is actively searching for flats.'
             )
             counter = 0
         return counter
