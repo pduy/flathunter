@@ -2,6 +2,7 @@
 import traceback
 from itertools import chain
 import requests
+from pprint import pformat
 
 from flathunter.logging import logger
 from flathunter.config import YamlConfig
@@ -54,7 +55,7 @@ class Hunter:
         result = []
         # We need to iterate over this list to force the evaluation of the pipeline
         for expose in processor_chain.process(self.crawl_for_exposes(max_pages)):
-            logger.info(f"New offer: {expose['title']}, url: {expose['url']}")
+            logger.info(f"New offer: \n {pformat(expose)} \n")
             result.append(expose)
 
         return result

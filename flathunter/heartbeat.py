@@ -11,6 +11,10 @@ def interval2counter(interval: str) -> int:
     """Transform the string interval to sleeper counter frequencies"""
     if interval is None:
         return 0
+    if interval.lower() == 'quarterhour':
+        return 900
+    if interval.lower() == 'halfhour':
+        return 1800
     if interval.lower() == 'hour':
         return 3600
     if interval.lower() == 'day':

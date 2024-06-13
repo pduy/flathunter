@@ -49,8 +49,6 @@ def main():
     # load config
     args = parse()
     config_handle = args.config
-    print(config_handle)
-    print(config_handle.name)
     if config_handle is not None:
         config = Config(config_handle.name)
     else:

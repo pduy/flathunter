@@ -41,11 +41,19 @@ filters:
      - "wg"
      - "zwischenmiete"
      - "tauschwohnung"
+     - "tausch"
+     - "wohnungsswap"
+     - "swap"
+     - "wbs"
+     - "möbliert"
+     - "furnished"
+     - "untermiet"
+     - "such"
    min_price: 500
-   max_price: 1600
+   max_price: 1700
    min_size: 50
    max_size: 150
-   max_price_per_square: 22
+   max_price_per_square: 25
 #filters:
 
 # There are often city districts in the address which
