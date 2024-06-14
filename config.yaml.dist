@@ -21,7 +21,7 @@ loop:
 # List the URLs in the following format:
 urls:
     #- https://www.immobilienscout24.de/Suche/de/berlin/berlin/wohnung-mit-keller-mieten?haspromotion=false&numberofrooms=2.0-10.0&price=500.0-1600.0&livingspace=50.0-150.0&exclusioncriteria=swapflat&pricetype=calculatedtotalrent&geocodes=110000000405,110000000406,110000000101,110000000201,110000000102,110000000103,110000000301,110000000401,110000000104,110000000105,110000000106,1100000002,110000000701&enteredFrom=result_list
-    - https://www.immowelt.de/suche/berlin/immobilien/mieten?ama=150&ami=50&d=true&pma=1600&pmi=1&rma=10&rmi=2&sd=DESC&sf=RELEVANCE&sp=1
+    - https://www.immowelt.de/suche/berlin/wohnungen/mieten?ama=200&ami=50&d=true&pma=1700&pmi=1&rma=10&rmi=2&sd=DESC&sf=TIMESTAMP&sp=1
     - https://www.wg-gesucht.de/
     - https://www.kleinanzeigen.de/s-wohnung-mieten/berlin/c203l3331
 # 	- https://www.immobilienscout24.de/Suche/...

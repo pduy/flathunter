@@ -38,6 +38,7 @@ gunicorn = "22.0.0"
 #flask-api = {git = "git+https://github.com/flask-api/flask-api.git", develop = true, rev = "develop"}
 flask-api = "*"
 jedi = "^0.19.1"
+chromedriver = "^2.24.1"
 
 
 [tool.poetry.group.dev.dependencies]
